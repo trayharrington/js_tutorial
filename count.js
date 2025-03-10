@@ -18,7 +18,7 @@ let uniques = new Map();
 //All words in the text
 let words = sonnet.match(/[\w']+/g);
 
-// Iterate through 'words' and build up an associative array of unique words.
+// Iterate through 'words' and build up a Map of unique words.
 for (let i = 0; i < words.length; i++) {
 	let word = words[i];
 	let totalAppeared = uniques.get(word);
@@ -29,5 +29,4 @@ for (let i = 0; i < words.length; i++) {
 	}
 }
 
-console.log(words);
 console.log(uniques);
