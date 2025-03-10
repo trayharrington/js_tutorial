@@ -4,3 +4,7 @@ function dayName(date) {
 
 			return daysOfTheWeek[now.getDay()];
 		}
+
+function greeting(date) {
+	return `Hello, world! Happy ${dayName(date)}.`
+}
