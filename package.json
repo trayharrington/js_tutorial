@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "fs": "^0.0.1-security",
     "trayharrington-palindrome": "^0.2.0"
   }
 }
