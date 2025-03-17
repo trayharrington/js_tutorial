@@ -1,0 +1,18 @@
+#!/opt/homebrew/bin/node
+import { request } from 'urllib';
+
+const { data, res } = await request('https://cdn.learnenough.com/phrases.txt');
+
+let Phrase = import("trayharrington-palindrome");
+
+console.log('status: %s, body size: %d, headers: %j', res.status, data.length, res.headers);
+
+urllib.request(url, { followRedirect: true }, function(error, data, response) {
+  let body = data.toString();
+  body.split("\n").forEach(function(line) {
+    let phrase = new Phrase(line);
+    if (phrase.palindrome()) {
+      console.log("palindrome detected:", line);
+    }
+  });
+});
